@@ -2,7 +2,7 @@ var util = require('util');
 var {Router} = require('express');
 
 // Our API for demos only
-import {fakeDataBase} from './db';
+import {realDataBase} from './db';
 import {fakeDemoRedisCache} from './cache';
 
 // you would use cookies/token etc
@@ -18,7 +18,7 @@ export function serverApi(req, res) {
   }
   console.log('/data.json Cache Miss');
 
-  fakeDataBase.get()
+  realDataBase.get()
     .then(data => {
       fakeDemoRedisCache.set(key, data);
       return data;

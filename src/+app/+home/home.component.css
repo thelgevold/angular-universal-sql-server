@@ -1,8 +1,22 @@
-blockquote {
-  border-left:5px #158126 solid;
-  background:#fff;
-  padding:20px 20px 20px 40px;
+.table {
+  padding-top: 30px;
 }
-blockquote::before {
-  left: 1em;
+.row {
+  display: table-row;
+  background: #f6f6f6;
+}
+
+.row:nth-of-type(odd) {
+  background: #e9e9e9;
+}
+
+.row.header {
+  color: #ffffff;
+  font-weight: bold;
+  background: #158126;
+}
+
+.cell {
+  padding: 20px;
+  display: table-cell;
 }

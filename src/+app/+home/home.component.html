@@ -1,6 +1,17 @@
 <div class="home">
-  Home component
-  <strong>Async data call return value:</strong>
-  <pre>{{ data | json }}</pre>
-  <blockquote>{{ data.data }}</blockquote>
+  <h3>Friends</h3>
+    <div class="table">
+      <div class="row header">
+        <div class="cell">Id</div>
+        <div class="cell">First Name</div>
+        <div class="cell">LastName</div>
+      </div>
+      <div class="row" *ngFor="let friend of data">
+        <div class="cell">{{friend.Id}}</div>
+        <div class="cell">{{friend.FirstName}}</div>
+        <div class="cell">{{friend.LastName}}</div>
+      </div>
+    </div>
 </div>
+
+
